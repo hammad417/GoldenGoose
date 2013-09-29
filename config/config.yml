@@ -1,0 +1,7 @@
+development:
+  facebook:
+    app_id: '524394234301652'
+    app_secret: '9b032b9154fec36908ab665f2f9b3c44'
+  google:
+    app_id: '608446217556-v87r7tvo7sfd22akfs3lijv4n6ao3urb.apps.googleusercontent.com'
+    app_secret: '_sBfzdWurj34iwtUx7IdvZwK'

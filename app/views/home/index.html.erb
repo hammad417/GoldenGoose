@@ -1,0 +1,50 @@
+<%= form_tag(add_email_path(current_user), :method=> :post) do %>
+  <%#= f.error_messages %>
+  <p>
+    <%= hidden_field_tag :auth_token, current_user.authentication_token %>
+  </p>
+  <p>
+    <%= label_tag :email_address %>
+    <%= email_field_tag :email_address %>
+  </p>
+  <p>
+    <%= submit_tag 'Add Email' %>
+  </p>
+<% end %>
+</br></br></br>
+
+<%= form_tag(users_search_path, :method=> :get) do %>
+  <%#= f.error_messages %>
+  <p>
+    <%= hidden_field_tag :auth_token, current_user.authentication_token %>
+  </p>
+  <p>
+    <%= label_tag :email_address %>
+    <%= text_field_tag :email_address %>
+  </p>
+  <p>
+    <%= submit_tag 'Search User' %>
+  </p>
+<% end %>
+</br></br></br>
+
+<%= form_tag(upload_receipt_image_path(current_user) , :multipart => true) do %>
+  <p>
+    <%= hidden_field_tag :auth_token, current_user.authentication_token %>
+  </p>
+  <p>
+    <%= label_tag :image %>
+    <%= file_field_tag :image %>
+  </p>
+  <p>
+    <%= label_tag :store_id %>
+    <%= text_field_tag :store_id %>
+  </p>
+  <p>
+    <%= label_tag :store_location_id %>
+    <%= text_field_tag :store_location_id %>
+  </p>
+  <p>
+    <%= submit_tag 'Submit' %>
+  </p>
+<% end %>
